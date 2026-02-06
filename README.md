@@ -156,5 +156,4 @@ Metadata_Creator_App/
 - If you still get **config host mismatch**, the CLI may not apply overrides before auth. Set the variable defaults in `databricks.yml` to your `DATABRICKS_HOST` and `DATABRICKS_SERVING_ENDPOINT` (see [Deploy](#deploy-to-databricks)).
 
 ## Licence
-
-This is a custom application for TfL metadata generation.
+This deploys an app to databricks
