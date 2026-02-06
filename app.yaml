@@ -1,0 +1,6 @@
+command: ["gunicorn", "-w", "2", "-b", "0.0.0.0:8000", "app:server"]
+runtime: python3.11
+
+env:
+  - name: DATABRICKS_SERVING_ENDPOINT
+    valueFrom: serving-endpoint

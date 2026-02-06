@@ -1,0 +1,16 @@
+# Dash and web framework
+dash>=2.14.0,<3.0.0
+dash-bootstrap-components>=1.5.0,<2.0.0
+
+# Databricks SDK
+databricks-sdk>=0.30.0,<1.0.0
+
+# Data processing
+pandas>=2.0.0,<3.0.0
+openpyxl>=3.0.0,<4.0.0
+
+# Web server for production
+gunicorn>=20.0.0,<22.0.0
+
+# Environment configuration
+python-dotenv>=0.19.0,<2.0.0

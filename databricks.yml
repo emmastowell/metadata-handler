@@ -1,0 +1,35 @@
+# This is a Databricks asset bundle definition for Metadata_Creator_App.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+#
+# Workspace URL and serving endpoint name come from .env when deploying (./deploy.sh writes variable-overrides.json).
+
+bundle:
+  name: Metadata_Creator_App
+
+# No real URLs or endpoint names here; set in .env. deploy.sh writes variable-overrides.json from .env.
+# If validate/deploy fail with "config host mismatch", set these variables' default: to your DATABRICKS_HOST and DATABRICKS_SERVING_ENDPOINT (see README).
+variables:
+  workspace_host:
+    description: "Databricks workspace URL (e.g. https://your-workspace.cloud.databricks.com)"
+    default: "https://YOUR_WORKSPACE.cloud.databricks.com"
+  serving_endpoint_name:
+    description: "Name of the Model Serving endpoint (e.g. databricks-claude-opus-4-5)"
+    default: "YOUR_SERVING_ENDPOINT"
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: ${var.workspace_host}
+    resources:
+      apps:
+        metadata_creator_app:
+          name: "metadata-creator-app-dev"
+          description: "Metadata Creator Dash App - Development"
+          source_code_path: .
+          resources:
+            - name: serving-endpoint
+              serving_endpoint:
+                name: ${var.serving_endpoint_name}
+                permission: CAN_QUERY
