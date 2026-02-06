@@ -1,6 +1,6 @@
 # Metadata Creator - Dash App
 
-A TfL-styled Plotly Dash application for generating metadata from data files using a Databricks Model Serving (Claude) endpoint.
+A Plotly Dash application for generating metadata from data files using a Databricks Model Serving  endpoint.
 
 ## Features
 
