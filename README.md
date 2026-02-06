@@ -4,7 +4,7 @@ A Plotly Dash application for generating metadata from data files using a Databr
 
 ## Features
 
-- **TfL-styled interface**: Transport for London roundel logo and colour scheme
+- **An interface**: 
 - **File upload**: CSV, Excel, JSON, and text files (up to 100MB)
 - **AI-powered metadata generation**: Connects to Databricks Model Serving
 - **Configurable prompt**: JSON schema and LLM instructions in a separate file
